@@ -1,0 +1,3 @@
+[submodule "m2scorer"]
+	path = m2scorer
+	url = git@github.com:nusnlp/m2scorer.git
