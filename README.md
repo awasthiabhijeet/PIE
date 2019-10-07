@@ -43,7 +43,7 @@
    - Adapted from [belambert's implimentation](https://github.com/belambert/edit-distance/blob/master/edit_distance/code.py)
  * get_edit_vocab.py : Extracts common insertions (\Sigma_a set as described in paper) from a parallel corpus
  * get_seq2edits.py : Extracts edits aligned to input tokens 
- * tokenize_test.py : tokenize a file containing sentences to be corrected. token_ids obtained go as input to the model.
+ * tokenize_input.py : tokenize a file containing sentences. token_ids obtained go as input to the model.
  * opcodes.py : A class where members are all possible edit operations
  * transform_suffixes.py: Contains logic for suffix transformations
  * tokenization.py : Similar to BERT's implementation, with some GEC specific changes
