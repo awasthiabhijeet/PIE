@@ -63,6 +63,9 @@ We present PIE, a BERT based architecture for local sequence transduction tasks 
    - Applies inferred edits from the PIE model to the incorrect sentences. 
    - Handles punctuations and spacings as per requirements of a standard dataset (INFER_MODE).
    - Contains some obvious rules for captialization etc.
+   
+ **Creating synthetic GEC dataset**
+ * errorify directory contains the scripts we used for perturbing the one-billion-word corpus
 
 ## Citing this work
 To cite this work, please cite our [EMNLP-IJCNLP 2019 paper](https://www.aclweb.org/anthology/D19-1435.pdf)
