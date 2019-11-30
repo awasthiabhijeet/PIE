@@ -8,7 +8,7 @@ We present PIE, a BERT based architecture for local sequence transduction tasks 
   
  ## Datasets
  * All the public GEC datasets used in the paper can be obtained from [here](https://www.cl.cam.ac.uk/research/nl/bea2019st/#data)
- * [Synthetically created datasets](https://drive.google.com/open?id=1bl5reJ-XhPEfEaPjvO45M7w0yN-0XGOA) (perturbed version of 1 billion word corpus) divided into 5 parts to train 5 independent ensembles. (all the ensembles are further finetuned using the public GEC datasets mentioned above.)
+* [Synthetically created datasets](https://drive.google.com/open?id=1bl5reJ-XhPEfEaPjvO45M7w0yN-0XGOA) (perturbed version of 1 billion word corpus) divided into 5 parts to independently train 5 different ensembles. (all the ensembles are further finetuned using the public GEC datasets mentioned above.)
     
  
  ## Pretrained Models
