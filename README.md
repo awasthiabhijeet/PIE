@@ -1,16 +1,15 @@
   # PIE: Parallel Iterative Edit Models for Local Sequence Transduction
-  [WIP]Grammatical Error Correction using BERT  
+ Fast Grammatical Error Correction using BERT  
   
   Code and Pre-trained models accompanying our paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
 
-  We present PIE, a BERT based architecture for local sequence transduction tasks like Grammatical Error Correction.
-  Unlike existing approaches which model GEC as a task of translation from "incorrect" to "correct" language, we pose GEC as local sequence editing task. 
-  Sequence editing happens in a sequence labelling set-up where parallel, non-autoregressive edits are made to the input sentence.
-  PIE models for GEC are 5 to 15 times faster than existing state of the art architectures and still maintain a competitive accuracy.
+We present PIE, a BERT based architecture for local sequence transduction tasks like Grammatical Error Correction. Unlike the standard approach of modeling GEC as a task of translation from "incorrect" to "correct" language, we pose GEC as local sequence editing task. We further reduce local sequence editing problem to a sequence labeling setup where we utilize BERT to non-autoregressively label input tokens with edits. We rewire the BERT architecture (without retraining) specifically for the task of sequence editing. We find that PIE models for GEC are 5 to 15 times faster than existing state of the art architectures and still maintain a competitive accuracy. For more details please see the paper.
   
   
  ## Datasets
  * All the public GEC datasets used in the paper can be obtained from [here](https://www.cl.cam.ac.uk/research/nl/bea2019st/#data)
+ * [Synthetically created datasets](https://drive.google.com/open?id=1bl5reJ-XhPEfEaPjvO45M7w0yN-0XGOA) (perturbed version of 1 billion word corpus) divided into 5 parts to train 5 independent ensembles. (all the ensembles are further finetuned using the public GEC datasets mentioned above.)
+    
  
  ## Pretrained Models
  * [PIE as reported in the paper](https://storage.cloud.google.com/gecabhijeet/pie_model.zip?_ga=2.140659505.-2027708043.1555853547) 
@@ -48,7 +47,7 @@
  * transform_suffixes.py: Contains logic for suffix transformations
  * tokenization.py : Similar to BERT's implementation, with some GEC specific changes
     
- **PIE model** (uses [tensorflow implementation of BERT](https://github.com/google-research/bert))
+ **PIE model** (uses [implementation of BERT of bert in Tensorflow](https://github.com/google-research/bert))
  
  * word_edit_model.py: Implementation of PIE for learning from a parallel corpous of incorrect tokens and aligned edits. 
    - logit factorization logic (Keep flag use_bert_more=True to enable logit factorization)
@@ -64,4 +63,24 @@
    - Applies inferred edits from the PIE model to the incorrect sentences. 
    - Handles punctuations and spacings as per requirements of a standard dataset (INFER_MODE).
    - Contains some obvious rules for captialization etc.
-   
+
+## Citing this work
+To cite this work, please cite our [EMNLP-IJCNLP 2019 paper](https://www.aclweb.org/anthology/D19-1435.pdf)
+```
+@inproceedings{awasthi-etal-2019-parallel,
+    title = "Parallel Iterative Edit Models for Local Sequence Transduction",
+    author = "Awasthi, Abhijeet  and
+      Sarawagi, Sunita  and
+      Goyal, Rasna  and
+      Ghosh, Sabyasachi  and
+      Piratla, Vihari",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-1435",
+    doi = "10.18653/v1/D19-1435",
+    pages = "4259--4269",
+}
+```
