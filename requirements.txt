@@ -2,9 +2,8 @@ joblib==0.11
 tensorflow==1.12
 tqdm==4.23.4
 autocorrect==0.3.0
-filelock=3.0.12
+filelock==3.0.12
 spacy_kenlm
-spacy download en_core_web_sm
 oauth2client==4.1.2
 google-api-python-client==1.7.3
 google-auth==1.5.0
