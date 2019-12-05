@@ -66,5 +66,5 @@ do
 	  --infer_mode=conll \
 	  --path_common_inserts=$data_dir/pickles/common_inserts.p \
 	  --path_common_multitoken_inserts=$data_dir/pickles/common_multitoken_inserts.p \
-	  --path_common_deletes=$data_dir/pickles/common_deletes.p \
+	  --path_common_deletes=$data_dir/pickles/common_deletes.p
 done
