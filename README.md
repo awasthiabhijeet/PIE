@@ -87,3 +87,5 @@ To cite this work, please cite our [EMNLP-IJCNLP 2019 paper](https://www.aclweb.
     pages = "4259--4269",
 }
 ```
+## Acknowledgements
+This research was partly sponsored by a Google India AI/ML Research Award and Google PhD Fellowship in Machine Learning. We gratefully acknowledge Google's TFRC program for providing us Cloud-TPUs. Thanks to [Varun Patil](https://github.com/pulsejet) for helping us improve the speed of pre-processing and synthetic-data generation pipelines.
