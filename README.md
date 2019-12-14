@@ -12,9 +12,21 @@ We present PIE, a BERT based architecture for local sequence transduction tasks 
     
  
  ## Pretrained Models
- * [PIE as reported in the paper](https://storage.cloud.google.com/gecabhijeet/pie_model.zip?_ga=2.140659505.-2027708043.1555853547) 
+ * [PIE as reported in the paper](https://storage.googleapis.com/gecabhijeet/pie_model.zip) 
    - trained on a Synethically created GEC dataset starting with BERT's initialization
    - finetuned further on Lang8, NUCLE and FCE datasets
+ * **Inference using the pretrained PIE ckpt**
+   - Copy the pretrained checkpoint files provided above to PIE_ckpt directory
+   - Your PIE_ckpt directory should contain
+      - bert_config.json
+      - multi_round_infer.sh
+      - pie_infer.sh
+      - pie_model.ckpt.data-00000-of-00001
+      - pie_model.ckpt.index
+      - pie_model.ckpt.meta
+      - vocab.txt
+   - Run: `$ ./multi_round_infer.sh` from PIE_ckpt directory
+   - NOTE: If you are using cloud-TPUs for inference, move the PIE_ckpt directory to the cloud bucket and change the paths in pie_infer.sh and multi_round_infer.sh accordingly
    
  ## Code Description
  **An example usage of code in described in the directory "example_scripts".**
