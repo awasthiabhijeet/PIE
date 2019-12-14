@@ -891,13 +891,13 @@ def main(_):
         total_time_per_step += elapsed_time
         output_line = " ".join(
             str(edit) for edit in prediction["predictions"] if edit > 0) + "\n"
-        logits = np.array(prediction["logits"])
-        logits_array.append(logits)
+        #logits = np.array(prediction["logits"])
+        #logits_array.append(logits)
         writer.write(output_line)
         num_written_lines += 1
     assert num_written_lines == num_actual_predict_examples
-    with tf.gfile.GFile(output_logits_file,"w") as writer:
-      np.save(writer,np.array(logits_array))
+    #with tf.gfile.GFile(output_logits_file,"w") as writer:
+      #np.save(writer,np.array(logits_array))
     tf.logging.info("Decoding time: {}".format(total_time_per_step))
 
 
