@@ -1,9 +1,28 @@
   # PIE: Parallel Iterative Edit Models for Local Sequence Transduction
  Fast Grammatical Error Correction using BERT  
   
-  Code and Pre-trained models accompanying our paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
+Code and Pre-trained models accompanying our paper "Parallel Iterative Edit Models for Local Sequence Transduction" (EMNLP-IJCNLP 2019)
 
-We present PIE, a BERT based architecture for local sequence transduction tasks like Grammatical Error Correction. Unlike the standard approach of modeling GEC as a task of translation from "incorrect" to "correct" language, we pose GEC as local sequence editing task. We further reduce local sequence editing problem to a sequence labeling setup where we utilize BERT to non-autoregressively label input tokens with edits. We rewire the BERT architecture (without retraining) specifically for the task of sequence editing. We find that PIE models for GEC are 5 to 15 times faster than existing state of the art architectures and still maintain a competitive accuracy. For more details please see the paper.
+PIE is a BERT based architecture for local sequence transduction tasks like Grammatical Error Correction. Unlike the standard approach of modeling GEC as a task of translation from "incorrect" to "correct" language, we pose GEC as local sequence editing task. We further reduce local sequence editing problem to a sequence labeling setup where we utilize BERT to non-autoregressively label input tokens with edits. We rewire the BERT architecture (without retraining) specifically for the task of sequence editing. We find that PIE models for GEC are 5 to 15 times faster than existing state of the art architectures and still maintain a competitive accuracy. For more details please check out our [EMNLP-IJCNLP 2019 paper](https://www.aclweb.org/anthology/D19-1435.pdf)
+
+```
+@inproceedings{awasthi-etal-2019-parallel,
+    title = "Parallel Iterative Edit Models for Local Sequence Transduction",
+    author = "Awasthi, Abhijeet  and
+      Sarawagi, Sunita  and
+      Goyal, Rasna  and
+      Ghosh, Sabyasachi  and
+      Piratla, Vihari",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-1435",
+    doi = "10.18653/v1/D19-1435",
+    pages = "4259--4269",
+}
+```
   
   
  ## Datasets
@@ -79,25 +98,6 @@ We present PIE, a BERT based architecture for local sequence transduction tasks 
  **Creating synthetic GEC dataset**
  * errorify directory contains the scripts we used for perturbing the one-billion-word corpus
 
-## Citing this work
-To cite this work, please cite our [EMNLP-IJCNLP 2019 paper](https://www.aclweb.org/anthology/D19-1435.pdf)
-```
-@inproceedings{awasthi-etal-2019-parallel,
-    title = "Parallel Iterative Edit Models for Local Sequence Transduction",
-    author = "Awasthi, Abhijeet  and
-      Sarawagi, Sunita  and
-      Goyal, Rasna  and
-      Ghosh, Sabyasachi  and
-      Piratla, Vihari",
-    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
-    month = nov,
-    year = "2019",
-    address = "Hong Kong, China",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/D19-1435",
-    doi = "10.18653/v1/D19-1435",
-    pages = "4259--4269",
-}
-```
+
 ## Acknowledgements
 This research was partly sponsored by a Google India AI/ML Research Award and Google PhD Fellowship in Machine Learning. We gratefully acknowledge Google's TFRC program for providing us Cloud-TPUs. Thanks to [Varun Patil](https://github.com/pulsejet) for helping us improve the speed of pre-processing and synthetic-data generation pipelines.
