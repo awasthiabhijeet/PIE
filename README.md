@@ -31,7 +31,7 @@ PIE is a BERT based architecture for local sequence transduction tasks like Gram
     
  
  ## Pretrained Models
- * [PIE as reported in the paper](https://storage.googleapis.com/gecabhijeet/pie_model.zip) 
+ * [PIE as reported in the paper](https://huggingface.co/AbhijeetA/PIE/resolve/main/pie_model.zip) 
    - trained on a Synethically created GEC dataset starting with BERT's initialization
    - finetuned further on Lang8, NUCLE and FCE datasets
  * **Inference using the pretrained PIE ckpt**
