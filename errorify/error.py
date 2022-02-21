@@ -50,6 +50,7 @@ def readn(file, n):
         if len(clist) == n:
             start = True
             yield clist
+            clist = []
     yield clist
 
 
